@@ -25,3 +25,8 @@ resource "aws_vpc" "main" {
     ManagedBy   = "terraform"
   }
 }
+
+output "vpc_id" {
+  description = "The ID of the VPC"
+  value       = aws_vpc.main.id
+}
